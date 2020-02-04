@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eed72fe2790363b1308980bc1d78afc8",
+    "revision": "6d96c5ed47a72480d476b783a440219c",
     "url": "/kojima-name-generator/index.html"
   },
   {
