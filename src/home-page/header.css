@@ -1,0 +1,17 @@
+.header{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: bolder;  
+    background-image: url("pennington_banner.png");
+    height: 246px;
+    width: 100%;
+}
+
+.gamer{
+    padding: 50px;
+}
+
+.footer{
+    text-align: center;
+    size: 10px;
+}
