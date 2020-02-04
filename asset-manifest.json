@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "soups-good.github.io/kojima-name-generator/static/css/main.df701ed8.chunk.css",
-    "main.js": "soups-good.github.io/kojima-name-generator/static/js/main.7fd84002.chunk.js",
-    "main.js.map": "soups-good.github.io/kojima-name-generator/static/js/main.7fd84002.chunk.js.map",
-    "runtime-main.js": "soups-good.github.io/kojima-name-generator/static/js/runtime-main.d52e651f.js",
-    "runtime-main.js.map": "soups-good.github.io/kojima-name-generator/static/js/runtime-main.d52e651f.js.map",
-    "static/js/2.4dffb5b1.chunk.js": "soups-good.github.io/kojima-name-generator/static/js/2.4dffb5b1.chunk.js",
-    "static/js/2.4dffb5b1.chunk.js.map": "soups-good.github.io/kojima-name-generator/static/js/2.4dffb5b1.chunk.js.map",
-    "index.html": "soups-good.github.io/kojima-name-generator/index.html",
-    "precache-manifest.974511118dbdc7c46f73ee9ce3623ce8.js": "soups-good.github.io/kojima-name-generator/precache-manifest.974511118dbdc7c46f73ee9ce3623ce8.js",
-    "service-worker.js": "soups-good.github.io/kojima-name-generator/service-worker.js",
-    "static/css/main.df701ed8.chunk.css.map": "soups-good.github.io/kojima-name-generator/static/css/main.df701ed8.chunk.css.map",
-    "static/js/2.4dffb5b1.chunk.js.LICENSE.txt": "soups-good.github.io/kojima-name-generator/static/js/2.4dffb5b1.chunk.js.LICENSE.txt",
-    "static/media/header.css": "soups-good.github.io/kojima-name-generator/static/media/pennington_banner.766f7c9c.png"
+    "main.css": "/kojima-name-generator/static/css/main.a995312d.chunk.css",
+    "main.js": "/kojima-name-generator/static/js/main.9d310b65.chunk.js",
+    "main.js.map": "/kojima-name-generator/static/js/main.9d310b65.chunk.js.map",
+    "runtime-main.js": "/kojima-name-generator/static/js/runtime-main.9411c13c.js",
+    "runtime-main.js.map": "/kojima-name-generator/static/js/runtime-main.9411c13c.js.map",
+    "static/js/2.4dffb5b1.chunk.js": "/kojima-name-generator/static/js/2.4dffb5b1.chunk.js",
+    "static/js/2.4dffb5b1.chunk.js.map": "/kojima-name-generator/static/js/2.4dffb5b1.chunk.js.map",
+    "index.html": "/kojima-name-generator/index.html",
+    "precache-manifest.28af640009df9ca4dad4ab76481e9810.js": "/kojima-name-generator/precache-manifest.28af640009df9ca4dad4ab76481e9810.js",
+    "service-worker.js": "/kojima-name-generator/service-worker.js",
+    "static/css/main.a995312d.chunk.css.map": "/kojima-name-generator/static/css/main.a995312d.chunk.css.map",
+    "static/js/2.4dffb5b1.chunk.js.LICENSE.txt": "/kojima-name-generator/static/js/2.4dffb5b1.chunk.js.LICENSE.txt",
+    "static/media/header.css": "/kojima-name-generator/static/media/pennington_banner.766f7c9c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d52e651f.js",
+    "static/js/runtime-main.9411c13c.js",
     "static/js/2.4dffb5b1.chunk.js",
-    "static/css/main.df701ed8.chunk.css",
-    "static/js/main.7fd84002.chunk.js"
+    "static/css/main.a995312d.chunk.css",
+    "static/js/main.9d310b65.chunk.js"
   ]
 }
