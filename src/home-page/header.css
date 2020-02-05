@@ -2,9 +2,11 @@
     font-family: 'Courier New', Courier, monospace;
     color: black;
     font-weight: bolder;  
-    background-image: url("pennington_banner.png");
     height: 246px;
     width: 100%;
+    text-align: center;
+    background-image: url('../imgs/initial_bdg_transparent.gif');
+    background-size: cover;
 }
 
 .gamer{

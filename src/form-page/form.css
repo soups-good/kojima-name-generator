@@ -1,11 +1,3 @@
 .kojima{
-    height: 20vh; /* Magic here */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.less-important{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }

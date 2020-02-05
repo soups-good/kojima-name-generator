@@ -223,7 +223,7 @@ class Form extends Component {
         if(this.state.cloneCondition === true){
             return <React.Fragment>
             <div className="container">
-              <h3 className = "row d-flex justify-content-center">You rolled the clone condition, so go trade half your name with someone else's</h3>
+              <h3 className = "row d-flex justify-content-center kojima">You rolled the clone condition, so go trade half your name with someone else's</h3>
             </div>
             </React.Fragment>  
         }
@@ -233,7 +233,7 @@ class Form extends Component {
         if(this.state.lickable === true){
             return <React.Fragment>
             <div className="container">
-              <h3 className = "row d-flex justify-content-center">If you feel like it, your middle name can be "Lickable." I won't stop you.</h3>
+              <h3 className = "row d-flex justify-content-center kojima">If you feel like it, your middle name can be "Lickable." I won't stop you.</h3>
             </div>
             </React.Fragment>  
         }
@@ -242,10 +242,10 @@ class Form extends Component {
       renderKojimaName() {
         return <React.Fragment>
           <div className="container">
-            <h2 className = "row d-flex justify-content-center">Your Kojima name is:</h2>
-            <h1 className = "row d-flex justify-content-center">{this.state.kojimaName}</h1>
-            <h3 className = "row d-flex justify-content-center">{this.state.nameCat}</h3>
-            <h3 className = "row d-flex justify-content-center">Now go make an elaborate back story to go along with your new name!</h3>
+            <h2 className = "row d-flex justify-content-center kojima">Your Kojima name is:</h2>
+            <h1 className = "row d-flex justify-content-center kojima">{this.state.kojimaName}</h1>
+            <h3 className = "row d-flex justify-content-center kojima">{this.state.nameCat}</h3>
+            <h3 className = "row d-flex justify-content-center kojima">Now go make an elaborate back story to go along with your new name!</h3>
           </div>
             </React.Fragment>  
       }

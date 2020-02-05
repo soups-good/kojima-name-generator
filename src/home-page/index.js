@@ -11,7 +11,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        {/* <Header/> */}
+        <Header/>
         <br></br><br></br><br></br>
         <div className="container">
           <Form/>
