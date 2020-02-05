@@ -17,7 +17,7 @@ class App extends Component {
           <Form/>
         </div>
         <br></br><br></br><br></br>
-        <div className = "footer">All of the ideas here are credited to <a href="https://twitter.com/briamgilbert" target="_blank">brian david gilbert</a>. Check out my inspiration <a href="https://www.youtube.com/watch?v=t-3i6GBYvdw" target="_blank">here!</a></div>
+        <div className = "footer">All of the ideas here are credited to <a href="https://twitter.com/briamgilbert" target="_blank" rel="noopener noreferrer">brian david gilbert</a>. Check out my inspiration <a href="https://www.youtube.com/watch?v=t-3i6GBYvdw" target="_blank" rel="noopener noreferrer">here!</a></div>
       </div>      
     )
   }

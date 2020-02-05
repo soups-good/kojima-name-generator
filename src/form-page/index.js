@@ -68,149 +68,149 @@ class Form extends Component {
             var kojimaCondition = false;
             var lickable = false;
             var nameCondition = false;
-            if(this.roll(4) == 4){
+            var nameCat = "";
+            if(this.roll(4) === 4){
                 // come back at the end to append this
                 manCondition = true;
             }
             // The condition condition
             var conditionRoll = this.roll(8);
-            if(conditionRoll == 6){
+            if(conditionRoll === 6){
                 kojimaName = " Big" + kojimaName;
             }
-            else if(conditionRoll == 7){
+            else if(conditionRoll === 7){
                 kojimaName = " Old" + kojimaName;
             }
-            else if(conditionRoll == 8){
+            else if(conditionRoll === 8){
                 kojimaName = " " + status + kojimaName;
             }
             //The Clone Condition
-            if(this.roll(12) == 12){
+            if(this.roll(12) === 12){
                 cloneCondition = true;
             }
             //The Kojima Condition
-            if(this.roll(100) == 69){
+            if(this.roll(100) === 69){
                 kojimaCondition = true;
+                kojimaName = "Hideo Kojima"
                 nameCat = "Oh no. You are Hideo Kojima. Hideo Kojima created you and is also you. You are the man who created himself and there is nothing you can do about it. You're in Kojima's world - your world - and that's just the breaks, pal. Stop this right now. You're Hideo Kojima. Go do the things that Hideo Kojima does."
             }
-            //Determine name category
-            var nameCat = "";
-            var nameCatRoll = this.roll(20);
-            if(nameCatRoll == 1){
-                nameCat = "NORMAL NAME";
-                kojimaName += " " + fullname;
+            else{
+              //Determine name category
+              var nameCatRoll = this.roll(20);
+              if(nameCatRoll === 1){
+                  nameCat = "NORMAL NAME";
+                  kojimaName += " " + fullname;
+              }
+              else if(nameCatRoll >= 2 && nameCatRoll <= 6){
+                  nameCat = "OCCUPATIONAL NAME";
+                  var occupationalRoll = this.roll(4);
+                  if(occupationalRoll === 1){
+                      kojimaName += " " + personality;
+                  }
+                  else if(occupationalRoll === 2){
+                      kojimaName += " " + talent;
+                  }
+                  else if(occupationalRoll === 3){
+                      kojimaName += " " + similar;
+                  }
+                  else{
+                      kojimaName += " " + kurt;
+                  }
+                  kojimaName += " " + condensedOccupation;
+              }
+              else if(nameCatRoll >= 7 && nameCatRoll <= 10){
+                  nameCat = "HORNY NAME";
+                  lickable = true;
+                  var hornyRoll = this.roll(4);
+                  if(hornyRoll === 1){
+                      kojimaName += " " + matter;
+                  }
+                  else if(hornyRoll === 2){
+                      kojimaName += " Naked";
+                  }
+                  else if(hornyRoll === 3){
+                      kojimaName += " " + talent;
+                  }
+                  else{
+                      kojimaName += " " + zodiac;
+                  }
+                  kojimaName += " " + pet;
+              }
+              else if(nameCatRoll >= 11 && nameCatRoll <= 13){
+                  nameCat = "THE NAME";
+                  nameCondition = true;
+                  var nameRoll = this.roll(4);
+                  if(nameRoll === 1){
+                      kojimaName += " " + intangible;
+                  }
+                  else if(nameRoll === 2){
+                      kojimaName += " " + horses;
+                  }
+                  else if(nameRoll === 3){
+                      kojimaName += " " + embarassingCondensedMem;
+                  }
+                  else{
+                      kojimaName += " " + war;
+                  }
+              }
+              else if(nameCatRoll >= 14 && nameCatRoll <= 17){
+                  nameCat = "COOL NAME";
+                  kojimaName += " " + condensedMads;
+                  var coolRoll = this.roll(6);
+                  if(coolRoll === 1){
+                      kojimaName += " " + kubrick;
+                  }
+                  else if(coolRoll === 2){
+                      kojimaName += " " + joy;
+                  }
+                  else if(coolRoll === 3){
+                      kojimaName += " " + NPR;
+                  }
+                  else if(coolRoll === 4){
+                      kojimaName += " " + talent;
+                  }
+                  else if(coolRoll === 5){
+                      kojimaName += " " + intangible;
+                  }
+                  else{
+                      kojimaName += " " + similar;
+                  }
+              }
+              else if(nameCatRoll >= 18 && nameCatRoll <= 19){
+                  nameCat = "VIOLENT NAME";
+                  var violentRoll = this.roll(4);
+                  if(violentRoll === 1){
+                      kojimaName += " " + NPR;
+                  }
+                  else if(violentRoll === 2){
+                      kojimaName += " " + matter;
+                  }
+                  else if(violentRoll === 3){
+                      kojimaName += " " + war;
+                  }
+                  else{
+                      kojimaName += " " + horses;
+                  }
+                  kojimaName += " " + stabbed;
+              }
+              else if(nameCatRoll === 20){
+                  nameCat = "NAME THAT LACKS SUBTEXT";
+                  kojimaName += " " + last;
+              }
+              if(manCondition){
+                  kojimaName += "-man";
+              }
+              if(nameCondition){
+                  kojimaName = " The" + kojimaName;
+              }
             }
-            else if(nameCatRoll >= 2 && nameCatRoll <= 6){
-                nameCat = "OCCUPATIONAL NAME";
-                var occupationalRoll = this.roll(4);
-                if(occupationalRoll == 1){
-                    kojimaName += " " + personality;
-                }
-                else if(occupationalRoll == 2){
-                    kojimaName += " " + talent;
-                }
-                else if(occupationalRoll == 3){
-                    kojimaName += " " + similar;
-                }
-                else{
-                    kojimaName += " " + kurt;
-                }
-                kojimaName += " " + condensedOccupation;
-            }
-            else if(nameCatRoll >= 7 && nameCatRoll <= 10){
-                nameCat = "HORNY NAME";
-                lickable = true;
-                var hornyRoll = this.roll(4);
-                if(hornyRoll == 1){
-                    kojimaName += " " + matter;
-                }
-                else if(hornyRoll == 2){
-                    kojimaName += " Naked";
-                }
-                else if(hornyRoll == 3){
-                    kojimaName += " " + talent;
-                }
-                else{
-                    kojimaName += " " + zodiac;
-                }
-                kojimaName += " " + pet;
-            }
-            else if(nameCatRoll >= 11 && nameCatRoll <= 12){
-                nameCat = "THE NAME";
-                nameCondition = true;
-                var nameRoll = this.roll(4);
-                if(nameRoll == 1){
-                    kojimaName += " " + intangible;
-                }
-                else if(nameRoll == 2){
-                    kojimaName += " " + horses;
-                }
-                else if(nameRoll == 3){
-                    kojimaName += " " + embarassingCondensedMem;
-                }
-                else{
-                    kojimaName += " " + war;
-                }
-            }
-            else if(nameCatRoll >= 14 && nameCatRoll <= 17){
-                nameCat = "COOL NAME";
-                kojimaName += " " + condensedMads;
-                var coolRoll = this.roll(6);
-                if(coolRoll == 1){
-                    kojimaName += " " + kubrick;
-                }
-                else if(coolRoll == 2){
-                    kojimaName += " " + joy;
-                }
-                else if(coolRoll == 3){
-                    kojimaName += " " + NPR;
-                }
-                else if(coolRoll == 4){
-                    kojimaName += " " + talent;
-                }
-                else if(coolRoll == 5){
-                    kojimaName += " " + intangible;
-                }
-                else{
-                    kojimaName += " " + similar;
-                }
-            }
-            else if(nameCatRoll >= 18 && nameCatRoll <= 19){
-                nameCat = "VIOLENT NAME";
-                var violentRoll = this.roll(4);
-                if(violentRoll == 1){
-                    kojimaName += " " + NPR;
-                }
-                else if(violentRoll == 2){
-                    kojimaName += " " + matter;
-                }
-                else if(violentRoll == 3){
-                    kojimaName += " " + war;
-                }
-                else{
-                    kojimaName += " " + horses;
-                }
-                kojimaName += " " + stabbed;
-            }
-            else if(nameCatRoll == 20){
-                nameCat = "NAME THAT LACKS SUBTEXT";
-                kojimaName += " " + last;
-            }
-            if(manCondition){
-                kojimaName += "-man";
-            }
-            if(nameCondition){
-                kojimaName = " The" + kojimaName;
-            }
-            if(kojimaCondition){
-                kojimaName = "Hideo Kojima";
-            }
-            // return cloneCondition, lickable, nameCat, kojimaName;
-            this.setState({cloneCondition: cloneCondition});
-            this.setState({lickable: lickable});
-            this.setState({nameCat: nameCat});
-            kojimaName += " ";
-            this.setState({kojimaName: kojimaName});
+            kojimaName = kojimaName + " ";
         }
+        // return cloneCondition, lickable, nameCat, kojimaName;
+        this.setState({cloneCondition: cloneCondition});
+        this.setState({lickable: lickable});
+        this.setState({nameCat: nameCat});        
+        this.setState({kojimaName: kojimaName});
       }
        
       handleSubmit = event => {
@@ -220,27 +220,33 @@ class Form extends Component {
       }
       
       renderCloneCondition(){
-        if(this.state.cloneCondition == true){
+        if(this.state.cloneCondition === true){
             return <React.Fragment>
-            <h3 className = "less-important">You rolled the clone condition, so go trade half your name with someone else's</h3>
+            <div className="container">
+              <h3 className = "row d-flex justify-content-center">You rolled the clone condition, so go trade half your name with someone else's</h3>
+            </div>
             </React.Fragment>  
         }
       }
 
       renderTongue(){
-        if(this.state.lickable == true){
+        if(this.state.lickable === true){
             return <React.Fragment>
-            <h3 className = "less-important">If you feel like it, your middle name can be "Lickable." I won't stop you.</h3>
+            <div className="container">
+              <h3 className = "row d-flex justify-content-center">If you feel like it, your middle name can be "Lickable." I won't stop you.</h3>
+            </div>
             </React.Fragment>  
         }
       }
 
       renderKojimaName() {
         return <React.Fragment>
-            <h2 className = "less-important">Your Kojima name is:</h2>
-            <h1 className = "kojima">{this.state.kojimaName}</h1>
-            <h3 className = "less-important">Your name category was: {this.state.nameCat}</h3>
-            <h3 className = "less-important">Now go make an elaborate back story to go along with your new name!</h3>
+          <div className="container">
+            <h2 className = "row d-flex justify-content-center">Your Kojima name is:</h2>
+            <h1 className = "row d-flex justify-content-center">{this.state.kojimaName}</h1>
+            <h3 className = "row d-flex justify-content-center">{this.state.nameCat}</h3>
+            <h3 className = "row d-flex justify-content-center">Now go make an elaborate back story to go along with your new name!</h3>
+          </div>
             </React.Fragment>  
       }
       
