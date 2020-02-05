@@ -1,12 +1,13 @@
 .header{
     font-family: 'Courier New', Courier, monospace;
-    color: black;
+    color: white;
     font-weight: bolder;  
     height: 246px;
     width: 100%;
     text-align: center;
-    background-image: url('../imgs/initial_bdg_transparent.gif');
+    background-image: url('../imgs/bdg_animation3.gif');
     background-size: cover;
+    background-color: black;
 }
 
 .gamer{

@@ -1,3 +1,14 @@
 .kojima{
     text-align: center;
 }
+.btn-primary{
+    background-color: black;
+    outline-color:gray;
+    border-color: gray;
+}
+.btn-primary:hover{
+    background-color: gray;
+    outline-color:gray;
+    border-color: gray;
+}
+
