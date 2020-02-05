@@ -2,7 +2,7 @@
   "name": "portifolio-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://soups-good.github.io/kojima-name-generator",
+  "homepage": "https://soups-good.github.io/kojima-name-generator/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
