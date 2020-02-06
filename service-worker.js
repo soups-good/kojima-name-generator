@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kojima-name-generator/precache-manifest.6e335bc2cd4282b6443645dc76d94065.js"
+  "/kojima-name-generator/precache-manifest.23965d8469aff5f6da105883f290cc9b.js"
 );
 
 self.addEventListener('message', (event) => {
