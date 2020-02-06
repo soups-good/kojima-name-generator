@@ -10,7 +10,6 @@
     margin:0;
     padding: 0;
 }
-
 .gamer{
     padding: 50px;
 }
@@ -18,4 +17,5 @@
 .footer{
     text-align: center;
     size: 10px;
+    margin: 25px;
 }
