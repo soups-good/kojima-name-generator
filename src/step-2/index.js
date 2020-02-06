@@ -67,7 +67,7 @@ class Step2 extends Component {
                 id="last"
                 name="last"
                 type="text"
-                placeholder="Enter what you're putting off doing to fill out this form"
+                placeholder="Why are you procrastinating?"
                 value={this.props.last}
                 onChange={this.props.handleChange}
                 />

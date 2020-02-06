@@ -24,7 +24,7 @@ class Step4 extends Component {
                 id="kubrick"
                 name="kubrick"
                 type="text"
-                placeholder="Enter your favorite Kubrick film ending here"
+                placeholder="It's Odyssey, isn't it"
                 value={this.props.kubrick}
                 onChange={this.props.handleChange}
                 /> 
@@ -35,7 +35,7 @@ class Step4 extends Component {
                 id="joy"
                 name="joy"
                 type="text"
-                placeholder="Enter your Joy Division title here"
+                placeholder="Enter your Joy Division title"
                 value={this.props.joy}
                 onChange={this.props.handleChange}
                 /> 
@@ -46,7 +46,7 @@ class Step4 extends Component {
                 id="NPR"
                 name="NPR"
                 type="text"
-                placeholder="Enter your favorite scientific word here"
+                placeholder="Enter your favorite science"
                 value={this.props.NPR}
                 onChange={this.props.handleChange}
                 /> 

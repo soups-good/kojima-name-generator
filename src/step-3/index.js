@@ -34,7 +34,7 @@ class Step3 extends Component {
                 id="similar"
                 name="similar"
                 type="text"
-                placeholder="I'm sorry about that matter pun, I really am"
+                placeholder="I'm sorry about that matter pun"
                 value={this.props.similar}
                 onChange={this.props.handleChange}
                 />
@@ -45,7 +45,7 @@ class Step3 extends Component {
                 id="zodiac"
                 name="zodiac"
                 type="text"
-                placeholder="Look I'm sorry, but Ted Cruz isn't a Zodiac sign"
+                placeholder="Ted Cruz isn't a Zodiac sign, :("
                 value={this.props.zodiac}
                 onChange={this.props.handleChange}
                 />

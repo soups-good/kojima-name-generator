@@ -36,6 +36,7 @@ class Form extends Component {
           cloneCondition: '',
           lickable: '',
           nameCat: '',
+          nameCatDesc: '',
           submitted: false
         }
       }
@@ -53,13 +54,15 @@ class Form extends Component {
 
       calculateName = () => {
         var kojimaName = "";
-        const { fullname, occupation, condensedOccupation, pet, embarassingCondensedMem, 
-            stabbed, talent, carrots, intangible, horses, last,
+        const { fullname, condensedOccupation, pet, embarassingCondensedMem, 
+            stabbed, talent, intangible, horses, last,
             status, matter, similar, zodiac, personality, 
             kurt, kubrick, joy, NPR, war, condensedMads } = this.state
         var numNames = this.roll(6);
+        var multiNameCondition = true;
         if(numNames < 6){
             numNames = 1;
+            multiNameCondition = false;
         }
         var kojimaNames = []; 
         for(var i = 0; i < numNames; i++){
@@ -67,10 +70,10 @@ class Form extends Component {
             // The -man condition
             var manCondition = false;
             var cloneCondition = false;
-            var kojimaCondition = false;
             var lickable = false;
             var nameCondition = false;
             var nameCat = "";
+            var nameCatDesc = "";
             if(this.roll(4) === 4){
                 // come back at the end to append this
                 manCondition = true;
@@ -92,7 +95,6 @@ class Form extends Component {
             }
             //The Kojima Condition
             if(this.roll(100) === 69){
-                kojimaCondition = true;
                 kojimaNames[i] = "Hideo Kojima"
                 nameCat = "Oh no. You are Hideo Kojima. Hideo Kojima created you and is also you. You are the man who created himself and there is nothing you can do about it. You're in Kojima's world - your world - and that's just the breaks, pal. Stop this right now. You're Hideo Kojima. Go do the things that Hideo Kojima does."
             }
@@ -101,102 +103,134 @@ class Form extends Component {
               var nameCatRoll = this.roll(20);
               if(nameCatRoll === 1){
                   nameCat = "NORMAL NAME";
+                  nameCatDesc = "Kojima's early work includes lots of characters that have names that are widely considered to be \"normal.\" Was this just because, in the early years, he didn't have the power to say, \"I'm Hideo Kojima, I can name someone Die-Hardman if I want to\" without people qustioning him? Probably.";
                   kojimaNames[i] += " " + fullname;
               }
               else if(nameCatRoll >= 2 && nameCatRoll <= 6){
                   nameCat = "OCCUPATIONAL NAME";
+                  nameCatDesc = "Kojima's characters tend to be driven by the work that they do. That often carries over to their names. You, too, can be nothing more than your job.";
                   var occupationalRoll = this.roll(4);
                   if(occupationalRoll === 1){
+                      // 15
                       kojimaNames[i] += " " + personality;
                   }
                   else if(occupationalRoll === 2){
+                      // 6
                       kojimaNames[i] += " " + talent;
                   }
                   else if(occupationalRoll === 3){
+                      // 13
                       kojimaNames[i] += " " + similar;
                   }
                   else{
+                      // 16
                       kojimaNames[i] += " " + kurt;
                   }
+                  // 2a
                   kojimaNames[i] += " " + condensedOccupation;
               }
               else if(nameCatRoll >= 7 && nameCatRoll <= 10){
                   nameCat = "HORNY NAME";
+                  nameCatDesc = " Kojima's characters and stories are irrevocably horny. Weirdly horny, sure, but horny nonetheless.";
                   lickable = true;
                   var hornyRoll = this.roll(4);
                   if(hornyRoll === 1){
+                      // 12
                       kojimaNames[i] += " " + matter;
                   }
                   else if(hornyRoll === 2){
                       kojimaNames[i] += " Naked";
                   }
                   else if(hornyRoll === 3){
+                      // 6
                       kojimaNames[i] += " " + talent;
                   }
                   else{
+                      // 14
                       kojimaNames[i] += " " + zodiac;
                   }
+                  // 3
                   kojimaNames[i] += " " + pet;
               }
               else if(nameCatRoll >= 11 && nameCatRoll <= 13){
                   nameCat = "THE NAME";
+                  nameCatDesc = "Kojima loves to make people have names that start with the word \"The\" and they usually symbolize fears or unstoppable forces. You are now that unstoppable force.";
                   nameCondition = true;
                   var nameRoll = this.roll(4);
                   if(nameRoll === 1){
+                      // 8
                       kojimaNames[i] += " " + intangible;
                   }
                   else if(nameRoll === 2){
+                      // 9
                       kojimaNames[i] += " " + horses;
                   }
                   else if(nameRoll === 3){
+                      // 4a
                       kojimaNames[i] += " " + embarassingCondensedMem;
                   }
                   else{
+                      // 20
                       kojimaNames[i] += " " + war;
                   }
               }
               else if(nameCatRoll >= 14 && nameCatRoll <= 17){
                   nameCat = "COOL NAME";
+                  nameCatDesc = "Kojima loves to be cool. Sometimes, his idea of cool is a bit strange, but it is always cool to Hideo Kojima, and that's what matters.";
                   kojimaNames[i] += " " + condensedMads;
                   var coolRoll = this.roll(6);
                   if(coolRoll === 1){
+                      // 17
                       kojimaNames[i] += " " + kubrick;
                   }
                   else if(coolRoll === 2){
+                      // 18
                       kojimaNames[i] += " " + joy;
                   }
                   else if(coolRoll === 3){
+                      // 19
                       kojimaNames[i] += " " + NPR;
                   }
                   else if(coolRoll === 4){
+                      // 6
                       kojimaNames[i] += " " + talent;
                   }
                   else if(coolRoll === 5){
+                      // 8
                       kojimaNames[i] += " " + intangible;
                   }
                   else{
+                      // 13
                       kojimaNames[i] += " " + similar;
                   }
               }
               else if(nameCatRoll >= 18 && nameCatRoll <= 19){
                   nameCat = "VIOLENT NAME";
+                  nameCatDesc = "Sometimes, a Kojima name can be very threatening and violent, like Sniper Wolf, or The Fury. Now you can also be threatening and violent."
                   var violentRoll = this.roll(4);
                   if(violentRoll === 1){
+                      // 19
                       kojimaNames[i] += " " + NPR;
                   }
                   else if(violentRoll === 2){
+                      // 12
                       kojimaNames[i] += " " + matter;
                   }
                   else if(violentRoll === 3){
+                      // 20
                       kojimaNames[i] += " " + war;
                   }
                   else{
+                      // 9
                       kojimaNames[i] += " " + horses;
                   }
+                  // 5
                   kojimaNames[i] += " " + stabbed;
               }
               else if(nameCatRoll === 20){
                   nameCat = "NAME THAT LACKS SUBTEXT";
+                  nameCatDesc = "Sometimes, Kojima gives up and just names a character exactly what they are. Congratulations. You are exactly what you do."
+                  // 10
                   kojimaNames[i] += " " + last;
               }
               if(manCondition){
@@ -209,9 +243,14 @@ class Form extends Component {
             kojimaNames[i] = kojimaNames[i] + " ";
         }
         // return cloneCondition, lickable, nameCat, kojimaNames[i];
+        if(multiNameCondition === true){
+            nameCat = "yeah that's all your name";
+            nameCatDesc = "You have a lot of names now because sometimes, Kojima likes to get a little bit convoluted. And that's OK! The first name there is your true name, and the rest are all just your alternate names. But don't tell Kojima that; they're all important to him.";
+        }
         this.setState({cloneCondition: cloneCondition});
         this.setState({lickable: lickable});
-        this.setState({nameCat: nameCat});  
+        this.setState({nameCat: nameCat}); 
+        this.setState({nameCatDesc: nameCatDesc});  
         for(var j = 0; j < kojimaNames.length; j++){
           kojimaName += kojimaNames[j] + "\n";
         }      
@@ -250,8 +289,8 @@ class Form extends Component {
             <h2 className = "row d-flex justify-content-center kojima">Your Kojima name is:</h2>
             {this.state.kojimaName.split("\n").map((i,key) => {
             return <h1 className = "row d-flex justify-content-center kojima" key={key}>{i}</h1>})}
-            {/* <h1 className = "row d-flex justify-content-center kojima">{this.state.kojimaName}</h1> */}
             <h3 className = "row d-flex justify-content-center kojima">{this.state.nameCat}</h3>
+            <h3 className = "row d-flex justify-content-center kojima">{this.state.nameCatDesc}</h3>
             <h3 className = "row d-flex justify-content-center kojima">Now go make an elaborate back story to go along with your new name!</h3>
           </div>
             </React.Fragment>  

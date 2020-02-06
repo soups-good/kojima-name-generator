@@ -66,7 +66,7 @@ class Step1 extends Component {
             id="embarassingCondensedMem"
             name="embarassingCondensedMem"
             type="text"
-            placeholder="Enter your shorter embarassing memory"
+            placeholder="Condense your memory"
             value={this.props.embarassingCondensedMem} // Prop: The full name input data
             onChange={this.props.handleChange} // Prop: Puts data into state
           />
