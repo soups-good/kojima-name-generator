@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c00d76a0f116c0d4cb040365313cd2ab",
+    "revision": "f6c181d9095d1866d808d815edca2486",
     "url": "/kojima-name-generator/index.html"
   },
   {
-    "revision": "0c05b601a5d93ef922c3",
-    "url": "/kojima-name-generator/static/css/main.c3c69281.chunk.css"
+    "revision": "d23fc47f7d2c051f2d35",
+    "url": "/kojima-name-generator/static/css/main.354f6721.chunk.css"
   },
   {
     "revision": "3fa64e7449792fa69b3e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kojima-name-generator/static/js/2.4dffb5b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0c05b601a5d93ef922c3",
-    "url": "/kojima-name-generator/static/js/main.50480e67.chunk.js"
+    "revision": "d23fc47f7d2c051f2d35",
+    "url": "/kojima-name-generator/static/js/main.e0880640.chunk.js"
   },
   {
     "revision": "580bd48ecc4f8950022e",
