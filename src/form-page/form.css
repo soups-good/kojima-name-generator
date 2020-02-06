@@ -11,4 +11,7 @@
     outline-color:gray;
     border-color: gray;
 }
-
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder; 
+}

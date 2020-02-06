@@ -52,7 +52,7 @@ class Form extends Component {
       }
 
       calculateName = () => {
-        var kojimaName = ""
+        var kojimaName = "";
         const { fullname, occupation, condensedOccupation, pet, embarassingCondensedMem, 
             stabbed, talent, carrots, intangible, horses, last,
             status, matter, similar, zodiac, personality, 
@@ -61,7 +61,9 @@ class Form extends Component {
         if(numNames < 6){
             numNames = 1;
         }
+        var kojimaNames = []; 
         for(var i = 0; i < numNames; i++){
+            kojimaNames[i] = "";
             // The -man condition
             var manCondition = false;
             var cloneCondition = false;
@@ -76,13 +78,13 @@ class Form extends Component {
             // The condition condition
             var conditionRoll = this.roll(8);
             if(conditionRoll === 6){
-                kojimaName = " Big" + kojimaName;
+                kojimaNames[i] = " Big" + kojimaNames[i];
             }
             else if(conditionRoll === 7){
-                kojimaName = " Old" + kojimaName;
+                kojimaNames[i] = " Old" + kojimaNames[i];
             }
             else if(conditionRoll === 8){
-                kojimaName = " " + status + kojimaName;
+                kojimaNames[i] = " " + status + kojimaNames[i];
             }
             //The Clone Condition
             if(this.roll(12) === 12){
@@ -91,7 +93,7 @@ class Form extends Component {
             //The Kojima Condition
             if(this.roll(100) === 69){
                 kojimaCondition = true;
-                kojimaName = "Hideo Kojima"
+                kojimaNames[i] = "Hideo Kojima"
                 nameCat = "Oh no. You are Hideo Kojima. Hideo Kojima created you and is also you. You are the man who created himself and there is nothing you can do about it. You're in Kojima's world - your world - and that's just the breaks, pal. Stop this right now. You're Hideo Kojima. Go do the things that Hideo Kojima does."
             }
             else{
@@ -99,117 +101,120 @@ class Form extends Component {
               var nameCatRoll = this.roll(20);
               if(nameCatRoll === 1){
                   nameCat = "NORMAL NAME";
-                  kojimaName += " " + fullname;
+                  kojimaNames[i] += " " + fullname;
               }
               else if(nameCatRoll >= 2 && nameCatRoll <= 6){
                   nameCat = "OCCUPATIONAL NAME";
                   var occupationalRoll = this.roll(4);
                   if(occupationalRoll === 1){
-                      kojimaName += " " + personality;
+                      kojimaNames[i] += " " + personality;
                   }
                   else if(occupationalRoll === 2){
-                      kojimaName += " " + talent;
+                      kojimaNames[i] += " " + talent;
                   }
                   else if(occupationalRoll === 3){
-                      kojimaName += " " + similar;
+                      kojimaNames[i] += " " + similar;
                   }
                   else{
-                      kojimaName += " " + kurt;
+                      kojimaNames[i] += " " + kurt;
                   }
-                  kojimaName += " " + condensedOccupation;
+                  kojimaNames[i] += " " + condensedOccupation;
               }
               else if(nameCatRoll >= 7 && nameCatRoll <= 10){
                   nameCat = "HORNY NAME";
                   lickable = true;
                   var hornyRoll = this.roll(4);
                   if(hornyRoll === 1){
-                      kojimaName += " " + matter;
+                      kojimaNames[i] += " " + matter;
                   }
                   else if(hornyRoll === 2){
-                      kojimaName += " Naked";
+                      kojimaNames[i] += " Naked";
                   }
                   else if(hornyRoll === 3){
-                      kojimaName += " " + talent;
+                      kojimaNames[i] += " " + talent;
                   }
                   else{
-                      kojimaName += " " + zodiac;
+                      kojimaNames[i] += " " + zodiac;
                   }
-                  kojimaName += " " + pet;
+                  kojimaNames[i] += " " + pet;
               }
               else if(nameCatRoll >= 11 && nameCatRoll <= 13){
                   nameCat = "THE NAME";
                   nameCondition = true;
                   var nameRoll = this.roll(4);
                   if(nameRoll === 1){
-                      kojimaName += " " + intangible;
+                      kojimaNames[i] += " " + intangible;
                   }
                   else if(nameRoll === 2){
-                      kojimaName += " " + horses;
+                      kojimaNames[i] += " " + horses;
                   }
                   else if(nameRoll === 3){
-                      kojimaName += " " + embarassingCondensedMem;
+                      kojimaNames[i] += " " + embarassingCondensedMem;
                   }
                   else{
-                      kojimaName += " " + war;
+                      kojimaNames[i] += " " + war;
                   }
               }
               else if(nameCatRoll >= 14 && nameCatRoll <= 17){
                   nameCat = "COOL NAME";
-                  kojimaName += " " + condensedMads;
+                  kojimaNames[i] += " " + condensedMads;
                   var coolRoll = this.roll(6);
                   if(coolRoll === 1){
-                      kojimaName += " " + kubrick;
+                      kojimaNames[i] += " " + kubrick;
                   }
                   else if(coolRoll === 2){
-                      kojimaName += " " + joy;
+                      kojimaNames[i] += " " + joy;
                   }
                   else if(coolRoll === 3){
-                      kojimaName += " " + NPR;
+                      kojimaNames[i] += " " + NPR;
                   }
                   else if(coolRoll === 4){
-                      kojimaName += " " + talent;
+                      kojimaNames[i] += " " + talent;
                   }
                   else if(coolRoll === 5){
-                      kojimaName += " " + intangible;
+                      kojimaNames[i] += " " + intangible;
                   }
                   else{
-                      kojimaName += " " + similar;
+                      kojimaNames[i] += " " + similar;
                   }
               }
               else if(nameCatRoll >= 18 && nameCatRoll <= 19){
                   nameCat = "VIOLENT NAME";
                   var violentRoll = this.roll(4);
                   if(violentRoll === 1){
-                      kojimaName += " " + NPR;
+                      kojimaNames[i] += " " + NPR;
                   }
                   else if(violentRoll === 2){
-                      kojimaName += " " + matter;
+                      kojimaNames[i] += " " + matter;
                   }
                   else if(violentRoll === 3){
-                      kojimaName += " " + war;
+                      kojimaNames[i] += " " + war;
                   }
                   else{
-                      kojimaName += " " + horses;
+                      kojimaNames[i] += " " + horses;
                   }
-                  kojimaName += " " + stabbed;
+                  kojimaNames[i] += " " + stabbed;
               }
               else if(nameCatRoll === 20){
                   nameCat = "NAME THAT LACKS SUBTEXT";
-                  kojimaName += " " + last;
+                  kojimaNames[i] += " " + last;
               }
               if(manCondition){
-                  kojimaName += "-man";
+                  kojimaNames[i] += "-man";
               }
               if(nameCondition){
-                  kojimaName = " The" + kojimaName;
+                  kojimaNames[i] = " The" + kojimaNames[i];
               }
             }
-            kojimaName = kojimaName + " ";
+            kojimaNames[i] = kojimaNames[i] + " ";
         }
-        // return cloneCondition, lickable, nameCat, kojimaName;
+        // return cloneCondition, lickable, nameCat, kojimaNames[i];
         this.setState({cloneCondition: cloneCondition});
         this.setState({lickable: lickable});
-        this.setState({nameCat: nameCat});        
+        this.setState({nameCat: nameCat});  
+        for(var j = 0; j < kojimaNames.length; j++){
+          kojimaName += kojimaNames[j] + "\n";
+        }      
         this.setState({kojimaName: kojimaName});
       }
        
@@ -243,7 +248,9 @@ class Form extends Component {
         return <React.Fragment>
           <div className="container">
             <h2 className = "row d-flex justify-content-center kojima">Your Kojima name is:</h2>
-            <h1 className = "row d-flex justify-content-center kojima">{this.state.kojimaName}</h1>
+            {this.state.kojimaName.split("\n").map((i,key) => {
+            return <h1 className = "row d-flex justify-content-center kojima" key={key}>{i}</h1>})}
+            {/* <h1 className = "row d-flex justify-content-center kojima">{this.state.kojimaName}</h1> */}
             <h3 className = "row d-flex justify-content-center kojima">{this.state.nameCat}</h3>
             <h3 className = "row d-flex justify-content-center kojima">Now go make an elaborate back story to go along with your new name!</h3>
           </div>
