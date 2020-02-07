@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kojima-name-generator/static/css/main.49e19afd.chunk.css",
+    "main.css": "/kojima-name-generator/static/css/main.e6ce34c2.chunk.css",
     "main.js": "/kojima-name-generator/static/js/main.7853f338.chunk.js",
     "main.js.map": "/kojima-name-generator/static/js/main.7853f338.chunk.js.map",
     "runtime-main.js": "/kojima-name-generator/static/js/runtime-main.6306edb1.js",
@@ -8,16 +8,16 @@
     "static/js/2.aaca363f.chunk.js": "/kojima-name-generator/static/js/2.aaca363f.chunk.js",
     "static/js/2.aaca363f.chunk.js.map": "/kojima-name-generator/static/js/2.aaca363f.chunk.js.map",
     "index.html": "/kojima-name-generator/index.html",
-    "precache-manifest.6790db0436ce916cfbb432ac2976c164.js": "/kojima-name-generator/precache-manifest.6790db0436ce916cfbb432ac2976c164.js",
+    "precache-manifest.634c82b7a2a03bb0c64013f1da568538.js": "/kojima-name-generator/precache-manifest.634c82b7a2a03bb0c64013f1da568538.js",
     "service-worker.js": "/kojima-name-generator/service-worker.js",
-    "static/css/main.49e19afd.chunk.css.map": "/kojima-name-generator/static/css/main.49e19afd.chunk.css.map",
+    "static/css/main.e6ce34c2.chunk.css.map": "/kojima-name-generator/static/css/main.e6ce34c2.chunk.css.map",
     "static/js/2.aaca363f.chunk.js.LICENSE.txt": "/kojima-name-generator/static/js/2.aaca363f.chunk.js.LICENSE.txt",
     "static/media/header.css": "/kojima-name-generator/static/media/bdg_animation3.d2d13409.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.6306edb1.js",
     "static/js/2.aaca363f.chunk.js",
-    "static/css/main.49e19afd.chunk.css",
+    "static/css/main.e6ce34c2.chunk.css",
     "static/js/main.7853f338.chunk.js"
   ]
 }
